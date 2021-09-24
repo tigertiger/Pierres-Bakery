@@ -20,7 +20,7 @@ namespace Bakery.Tests
       // string fakeBread = "fakebread";
 
       //Act
-      Bread testBread = new Bread(5);
+      Bread testBread = new Bread(1, 5);
 
       //Assert
       Assert.AreEqual(typeof(Bread), testBread.GetType());
@@ -31,7 +31,7 @@ namespace Bakery.Tests
     {
       //Arrange
       int price = 5;
-      Bread testBread = new Bread(price);
+      Bread testBread = new Bread(1, price);
 
       //Act
       int basePrice = testBread.Price;
@@ -59,8 +59,8 @@ namespace Bakery.Tests
       //Arrange
       int spendy = 33;
       int basePrice = 5;
-      Bread thirtyThreeLbBread = new Bread(spendy);
-      Bread sourdoughLoaf = new Bread(basePrice);
+      Bread thirtyThreeLbBread = new Bread(1, spendy);
+      Bread sourdoughLoaf = new Bread(1, basePrice);
       List<Bread> breadOrder = new List<Bread> {thirtyThreeLbBread, sourdoughLoaf};
       List<Bread> halfOrder = new List<Bread> {sourdoughLoaf};
 
@@ -74,22 +74,20 @@ namespace Bakery.Tests
     [TestMethod]
     public void Bread_CalculateLoaves_BreadNumber()
     {
-      int spendy = 33;
-      int basePrice = 5;
-      Bread thirtyThreeLbBread = new Bread(spendy);
-      Bread sourdoughLoaf = new Bread(basePrice);
-      List<Bread> breadOrder = new List<Bread> {thirtyThreeLbBread, sourdoughLoaf};
 
       //Arrange
-      int price = 5;
-      int loaves = 2;
-      Bread testBread = new Bread(price);
+      int spendy = 33;
+      int basePrice = 5;
+      Bread thirtyThreeLbBread = new Bread(1, spendy);
+      Bread sourdoughLoaf = new Bread(1, basePrice);
+      List<Bread> breadOrder = new List<Bread> {thirtyThreeLbBread, sourdoughLoaf};
 
       //Act
-      int baseLoaves = testBread.Loaves;
+      int countLoaves = breadOrder.Count;
+      int testCount = 2;
 
       //Assert
-      Assert.AreEqual(loaves, baseLoaves);
+      Assert.AreEqual(testCount, countLoaves);
     }
 
     // [TestMethod] 
@@ -114,15 +112,35 @@ namespace Bakery.Tests
     // }
 
     [TestMethod] 
-    public void Bread_CalculateOrderPrice_TotalPrice()
+    public void Cashier_CalculateOrderPrice_TotalPrice()
     {
       // Arrange
-      int spendy = 33;
-      int basePrice = 5;
-      Bread wholeWheatLump = new Bread(spendy);
-      Bread sourdoughLoaf = new Bread(basePrice);
+      int price = 5;
+      Bread wholeWheatLump = new Bread(1, price);
+      Bread sourdoughLoaf = new Bread(1, price);
       List<Bread> breadOrder = new List<Bread> {wholeWheatLump, sourdoughLoaf};
       int orderPrice = 10;
+
+      //Act
+      int testOrderPrice = wholeWheatLump.Cashier();
+
+      //Assert
+      Assert.AreEqual(orderPrice, testOrderPrice);
+
+    }
+
+    [TestMethod] 
+    public void Cashier_CalculateBigOrderPrice_TotalPrice()
+    {
+      // Arrange
+      int price = 5;
+      Bread wholeWheatLump = new Bread(1, price);
+      Bread sourdoughLoaf = new Bread(1, price);
+      Bread badBaguette = new Bread(1, price);
+      Bread notABreadAtAll = new Bread(1, price);
+      Bread humanMeatBao = new Bread(1, price);
+      List<Bread> breadOrder = new List<Bread> {wholeWheatLump, sourdoughLoaf, badBaguette, notABreadAtAll, humanMeatBao};
+      int orderPrice = 20;
 
       //Act
       int testOrderPrice = wholeWheatLump.Cashier();
