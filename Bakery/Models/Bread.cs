@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System;
+using System.Linq;
 
 namespace Bakery.Models
 {
@@ -7,9 +8,10 @@ namespace Bakery.Models
   {
 
     public int Price { get; set; }
+    public int Loaves {get ; set; }
     public static List<Bread> BreadOrder = new List<Bread> {};
 
-    public static List<Bread> GetAll()
+    public static List<Bread> GetYourBreads()
     {
       return BreadOrder;
     }
@@ -23,7 +25,10 @@ namespace Bakery.Models
     {
       Price = 5;
       BreadOrder.Add(this);
+      Loaves = 2;
     }
+
+
 
   }
 }
