@@ -14,7 +14,7 @@ namespace Bakery.Models
 
     public Pastry(int crubs, int price)
     {
-      Price = 5;
+      Price = 2;
       PastryOrder.Add(this);
       Crubs = crubs;
     }
@@ -35,7 +35,7 @@ namespace Bakery.Models
 
       if (CustOrder > 2) 
       {
-      return (CustOrder * 5) - (CustOrder/3*5);
+      return (CustOrder * 2) - (CustOrder/3);
       }
       else 
       {
@@ -53,4 +53,6 @@ namespace Bakery.Models
 5: $9
 6: $10
 Every 3rd pastry is -$1
+cost = 2*number_of_pastries - ((number_of_pastries/3).round_down)
+(CustOrder * 2) - (CustOrder/3)
 */

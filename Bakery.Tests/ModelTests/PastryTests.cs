@@ -20,7 +20,7 @@ namespace Bakery.Tests
       // string fakePastry = "fakepastry";
 
       //Act
-      Pastry testPastry = new Pastry(1, 5);
+      Pastry testPastry = new Pastry(1, 2);
 
       //Assert
       Assert.AreEqual(typeof(Pastry), testPastry.GetType());
@@ -30,7 +30,7 @@ namespace Bakery.Tests
     public void Pastry_ReturnPastryPrice_Price()
     {
       //Arrange
-      int price = 5;
+      int price = 2;
       Pastry testPastry = new Pastry(1, price);
 
       //Act
@@ -89,43 +89,43 @@ namespace Bakery.Tests
       Assert.AreEqual(testCount, countCrubs);
     }
 
-    // [TestMethod] 
-    // public void Cashier_CalculateOrderPrice_TotalPrice()
-    // {
-    //   // Arrange
-    //   int price = 5;
-    //   Pastry staleCrust = new Pastry(1, price);
-    //   Pastry cutieCupcake = new Pastry(1, price);
-    //   List<Pastry> PastryOrder = new List<Pastry> {staleCrust, cutieCupcake};
-    //   int orderPrice = 10;
+    [TestMethod] 
+    public void Cashier_CalculateOrderPrice_TotalPrice()
+    {
+      // Arrange
+      int price = 2;
+      Pastry staleCrust = new Pastry(1, price);
+      Pastry cutieCupcake = new Pastry(1, price);
+      List<Pastry> PastryOrder = new List<Pastry> {staleCrust, cutieCupcake};
+      int orderPrice = 4;
 
-    //   //Act
-    //   int testOrderPrice = staleCrust.Cashier();
+      //Act
+      int testOrderPrice = staleCrust.Cashier();
 
-    //   //Assert
-    //   Assert.AreEqual(orderPrice, testOrderPrice);
+      //Assert
+      Assert.AreEqual(orderPrice, testOrderPrice);
 
-    // }
+    }
 
-    // [TestMethod] 
-    // public void Cashier_CalculateBigOrderPrice_TotalPrice()
-    // {
-    //   // Arrange
-    //   int price = 5;
-    //   Pastry staleCrust = new Pastry(1, price);
-    //   Pastry cutieCupcake = new Pastry(1, price);
-    //   Pastry croissant = new Pastry(1, price);
-    //   Pastry notAPastryAtAll = new Pastry(1, price);
-    //   Pastry birdFeatherPie = new Pastry(1, price);
-    //   List<Pastry> PastryOrder = new List<Pastry> {staleCrust, cutieCupcake, croissant, notAPastryAtAll, birdFeatherPie};
-    //   int orderPrice = 20;
+    [TestMethod] 
+    public void Cashier_CalculateBigOrderPrice_TotalPrice()
+    {
+      // Arrange
+      int price = 2;
+      Pastry staleCrust = new Pastry(1, price);
+      Pastry cutieCupcake = new Pastry(1, price);
+      Pastry croissant = new Pastry(1, price);
+      Pastry notAPastryAtAll = new Pastry(1, price);
+      Pastry birdFeatherPie = new Pastry(1, price);
+      List<Pastry> PastryOrder = new List<Pastry> {staleCrust, cutieCupcake, croissant, notAPastryAtAll, birdFeatherPie};
+      int orderPrice = 9;
 
-    //   //Act
-    //   int testOrderPrice = staleCrust.Cashier();
+      //Act
+      int testOrderPrice = staleCrust.Cashier();
 
-    //   //Assert
-    //   Assert.AreEqual(orderPrice, testOrderPrice);
+      //Assert
+      Assert.AreEqual(orderPrice, testOrderPrice);
 
-    // }
+    }
   }
 }
