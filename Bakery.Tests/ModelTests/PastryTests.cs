@@ -6,11 +6,11 @@ namespace Bakery.Tests
   [TestClass]
   public class PastryTests
   {
-    [TestMethod]
-    public void NameOfMethod_DescribeBehavior_ExpectedResult()
-    {
+    // [TestMethod]
+    // public void NameOfMethod_DescribeBehavior_ExpectedResult()
+    // {
 
-    }
+    // }
 
   }
 }
