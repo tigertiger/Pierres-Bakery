@@ -42,6 +42,7 @@ namespace Bakery.Models
       return CustOrder * Price;
       }
     }
+
     // public int Cashier() {
     //   if (Loaves > 2) 
     //   {
