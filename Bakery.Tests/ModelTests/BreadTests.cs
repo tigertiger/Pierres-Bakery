@@ -52,6 +52,26 @@ namespace Bakery.Tests
       //Assert
       CollectionAssert.AreEqual(testOrder, glorbus);
     }
+
+    [TestMethod]
+    public void GetAll_ReturnBreads_BreadList()
+    {
+      //Arrange
+      int spendy = 33;
+      int basePrice = 5;
+      Bread thirtyThreeLbBread = new Bread(spendy);
+      Bread sourdoughLoaf = new Bread(basePrice);
+      List<Bread> breadOrder = new List<Bread> {thirtyThreeLbBread, sourdoughLoaf};
+      List<Bread> halfOrder = new List<Bread> {sourdoughLoaf};
+
+      //Act
+      List<Bread> checkOrder = Bread.GetAll();
+
+      //Assert
+      CollectionAssert.AreEqual(breadOrder, checkOrder);
+
+
+    }
   }
 }
 
