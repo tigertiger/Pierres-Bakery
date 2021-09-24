@@ -92,21 +92,40 @@ namespace Bakery.Tests
       Assert.AreEqual(loaves, baseLoaves);
     }
 
+    // [TestMethod] 
+    // public void Bread_CalculateOrderPrice_TotalPrice()
+    // {
+    //   // Arrange
+    //   int spendy = 33;
+    //   int basePrice = 5;
+    //   Bread thirtyThreeLbBread = new Bread(spendy);
+    //   Bread sourdoughLoaf = new Bread(basePrice);
+    //   List<Bread> breadOrder = new List<Bread> {thirtyThreeLbBread, sourdoughLoaf};
+    //   int price = 5;
+    //   int orderPrice = 10;
+    //   Bread testBread = new Bread(price);
+
+    //   //Act
+    //   int testOrderPrice = testBread.OrderPrice;
+
+    //   //Assert
+    //   Assert.AreEqual(orderPrice, testOrderPrice);
+
+    // }
+
     [TestMethod] 
     public void Bread_CalculateOrderPrice_TotalPrice()
     {
       // Arrange
       int spendy = 33;
       int basePrice = 5;
-      Bread thirtyThreeLbBread = new Bread(spendy);
+      Bread wholeWheatLump = new Bread(spendy);
       Bread sourdoughLoaf = new Bread(basePrice);
-      List<Bread> breadOrder = new List<Bread> {thirtyThreeLbBread, sourdoughLoaf};
-      int price = 5;
+      List<Bread> breadOrder = new List<Bread> {wholeWheatLump, sourdoughLoaf};
       int orderPrice = 10;
-      Bread testBread = new Bread(price);
 
       //Act
-      int testOrderPrice = testBread.OrderPrice;
+      int testOrderPrice = wholeWheatLump.Cashier();
 
       //Assert
       Assert.AreEqual(orderPrice, testOrderPrice);

@@ -27,7 +27,10 @@ namespace Bakery.Models
       Price = 5;
       BreadOrder.Add(this);
       Loaves = 2;
-      OrderPrice = Loaves * Price;
+    }
+
+    public int Cashier() {
+      return Loaves * Price;
     }
 
   }
