@@ -9,6 +9,7 @@ namespace Bakery.Models
 
     public int Price { get; set; }
     public int Loaves {get ; set; }
+    public int OrderPrice { get; set; }
     public static List<Bread> BreadOrder = new List<Bread> {};
 
     public static List<Bread> GetYourBreads()
@@ -26,9 +27,8 @@ namespace Bakery.Models
       Price = 5;
       BreadOrder.Add(this);
       Loaves = 2;
+      OrderPrice = Loaves * Price;
     }
-
-
 
   }
 }

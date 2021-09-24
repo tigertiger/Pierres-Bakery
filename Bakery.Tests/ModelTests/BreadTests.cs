@@ -91,6 +91,27 @@ namespace Bakery.Tests
       //Assert
       Assert.AreEqual(loaves, baseLoaves);
     }
+
+    [TestMethod] 
+    public void Bread_CalculateOrderPrice_TotalPrice()
+    {
+      // Arrange
+      int spendy = 33;
+      int basePrice = 5;
+      Bread thirtyThreeLbBread = new Bread(spendy);
+      Bread sourdoughLoaf = new Bread(basePrice);
+      List<Bread> breadOrder = new List<Bread> {thirtyThreeLbBread, sourdoughLoaf};
+      int price = 5;
+      int orderPrice = 10;
+      Bread testBread = new Bread(price);
+
+      //Act
+      int testOrderPrice = testBread.OrderPrice;
+
+      //Assert
+      Assert.AreEqual(orderPrice, testOrderPrice);
+
+    }
   }
 }
 
