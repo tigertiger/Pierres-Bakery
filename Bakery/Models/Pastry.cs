@@ -45,14 +45,3 @@ namespace Bakery.Models
 
   }
 }
-/*
-1: $2
-2: $4
-3: $5
-4: $7
-5: $9
-6: $10
-Every 3rd pastry is -$1
-cost = 2*number_of_pastries - ((number_of_pastries/3).round_down)
-(CustOrder * 2) - (CustOrder/3)
-*/

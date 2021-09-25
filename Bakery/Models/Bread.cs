@@ -42,27 +42,5 @@ namespace Bakery.Models
       return CustOrder * Price;
       }
     }
-
-    // public int Cashier() {
-    //   if (Loaves > 2) 
-    //   {
-    //   return (Loaves * 5) - (Loaves/3*5);
-    //   }
-    //   else 
-    //   {
-    //   return Loaves * Price;
-    //   }
-    // }
-
   }
 }
-
-/* 
-Loaves * 5 - Loaves/3*5
-5 5 X 5 5 X
-5 5 X 5 5
-5 5 X 5
-5 5 X
-5 5
-5
-*/
