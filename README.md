@@ -13,7 +13,7 @@
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+_This C#-based console application allows users to pretend to buy bread and pastries from "Pierre's Bakery." After setup [detailed below], simply follow the on-screen prompts and enjoy hours of fictional bready commerce._
 
 ## Instructions
 
@@ -24,37 +24,36 @@ _{This is a detailed description of your application. Give as much detail as nee
 
 ### Setup/Installation
 
-* _Clone [this repository](https://github.com/tigertiger/REPONAME) to an empty folder or to your desktop, or download and open the Zip on your local machine  
+* _Clone [this repository](https://github.com/tigertiger/Pierres-Bakery) to an empty folder or to your desktop, or download and open the Zip on your local machine  
 Instructions for cloning can be found [here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository)._
-* Open the FOLDER NAME folder in your preferred text editor
+* Open the Bakery.Solution folder in your preferred text editor
 * Restore and build the project:
-  - Navigate to the NAME/name folder in the command line or terminal 
-    -- Run the command ```dotnet restore``` to restore the project dependencies
-    -- Run the command ```dotnet build``` to build and compile the project
-  - Navigate to the NAME/name.tests folder in the command line or terminal 
-    -- Run the command ```dotnet restore``` to restore the test project dependencies
-    -- Run the command ```dotnet build``` to build and compile the test project
+  - Navigate to the Bakery.Solution/ folder in the command line or terminal 
+    -- Run ```dotnet restore``` to restore the project dependencies
+    -- Run ```dotnet build``` to build and compile the project
+  - Navigate to the Bakery.Solution/Bakery.tests folder in the command line or terminal 
+    -- Run ```dotnet restore``` to restore the test project dependencies
+    -- Run  ```dotnet build``` to build and compile the test project
 * Testing:
-  - You must restore and build the project first, as outlined previously in these instructions.
-  - In the terminal (navigated to the Name/name.tests folder) run the command ```dotnet test```
-* Run Console App:
-  - Navigate to the NAME/name folder in the terminal
-  - Run the command ```dotnet run``` 
+  - First run restore and build, as outlined above
+  - Next, in the terminal [make sure you're in the Bakery.Solution/Bakery.Tests folder], run ```dotnet test```
+* Run the Console App:
+  - Navigate to the Bakery.Solution/Bakery folder in the terminal
+  - Run ```dotnet run``` 
   - The application will run in the console
+  - Pretend to buy bread! And pastries! What fun!
 
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* _No known bugs at this time_
 
 ## License
 
 _[GPL](https://opensource.org/licenses/gpl-license)_
 _Copyright (c) 2021, Melissa Schatz-Miller_
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
-
 ## Contact Information
 
-Melissa Schatz-Miller <melissa.scmi@gmail.com>
+Melissa Schatz-Miller <melissa.scmi@gmail.com>  
+_Please feel free to reach out to me with suggested changes/improvements, or if you have any questions._
