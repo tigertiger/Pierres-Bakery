@@ -13,6 +13,11 @@ namespace Bakery
       Console.WriteLine(" Where we like to say, 'Every Third Bread is Free!'");
       Console.WriteLine("------------------------------------------------");
       Console.WriteLine("------------------------------------------------");
+      Console.WriteLine("--------------------  Menu  --------------------");
+      Console.WriteLine("-----------------   Bread: $5  -----------------");
+      Console.WriteLine("-----------------  Pastry: $2  -----------------");
+      Console.WriteLine("------------------------------------------------");
+      Console.WriteLine("------------------------------------------------");
       Console.WriteLine("                        ");
       Console.WriteLine("                        ");
       Console.WriteLine("Would you like to order Bread [B] or Pastry [P]?");
